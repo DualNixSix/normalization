@@ -57,8 +57,8 @@ nltk.download('averaged_perceptron_tagger')
 nltk.download('averaged_perceptron_tagger_eng')
 
 # 1. Open and read the story text - CAN CHANGE HERE EASILY 1, 2 OR CUSTOM!
-with open("story2.txt", "r", encoding="utf-8") as file:
-    story = file.read()
+with open("story1.txt", "r", encoding="utf-8") as file:
+    story = file.read().lower()
 
 # 2. Remove any unwanted characters using re.sub
 clean_story = re.sub(r'http\S+|<.*?>|[’]|[‘]|[“]|[”]|[^\w\s]', '', story).lower()
