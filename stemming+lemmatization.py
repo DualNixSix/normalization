@@ -64,7 +64,7 @@ clean_story = re.sub(r'http\S+|<.*?>|[’]|[‘]|[“]|[”]|[^\w\s]', '', story
 
 # http\S every http:
 # <.*?> every HTML Tag
-# [^\w\s] everything that is not a letter
+# [^\w\s] everything that is not a word character
 
 # 3. Tokenize the story into sentences
 sentences = [sent_tokenize(story)]
