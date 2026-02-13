@@ -46,8 +46,7 @@ import nltk
 import re
 from nltk import pos_tag
 from nltk.tokenize import sent_tokenize, word_tokenize
-from nltk.corpus import stopwords 
-from nltk.corpus import wordnet
+from nltk.corpus import stopwords, wordnet
 from nltk.stem import PorterStemmer, WordNetLemmatizer
 
 nltk.download('punkt')
@@ -61,7 +60,7 @@ with open("story1.txt", "r", encoding="utf-8") as file:
     story = file.read().lower()
 
 # 2. Remove any unwanted characters using re.sub
-clean_story = re.sub(r'http\S+|<.*?>|[’]|[‘]|[“]|[”]|[^\w\s]', '', story).lower()
+clean_story = re.sub(r'http\S+|<.*?>|[’]|[‘]|[“]|[”]|[^\w\s]', '', story)
 
 # http\S every http:
 # <.*?> every HTML Tag
